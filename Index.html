@@ -10,23 +10,23 @@
   @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap');
 
 :root {
-–bg: #0a0a12;
-–panel: #12121e;
-–border: #2a2a3e;
-–accent: #00e5ff;
-–accent2: #ff3d7f;
-–accent3: #7cff3d;
-–text: #c8c8e0;
-–text-dim: #6a6a8e;
-–grid-line: rgba(255,255,255,0.06);
-–hover: rgba(0,229,255,0.1);
+--bg: #0a0a12;
+--panel: #12121e;
+--border: #2a2a3e;
+--accent: #00e5ff;
+--accent2: #ff3d7f;
+--accent3: #7cff3d;
+--text: #c8c8e0;
+--text-dim: #6a6a8e;
+--grid-line: rgba(255,255,255,0.06);
+--hover: rgba(0,229,255,0.1);
 }
 
-- { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-background: var(–bg);
-color: var(–text);
+background: var(--bg);
+color: var(--text);
 font-family: ‘Share Tech Mono’, monospace;
 min-height: 100vh;
 overflow-x: hidden;
@@ -47,7 +47,7 @@ z-index: 9999;
 
 header {
 padding: 16px 24px;
-border-bottom: 1px solid var(–border);
+border-bottom: 1px solid var(--border);
 display: flex;
 align-items: center;
 gap: 16px;
@@ -57,14 +57,14 @@ background: linear-gradient(180deg, rgba(0,229,255,0.03) 0%, transparent 100%);
 header h1 {
 font-family: ‘Press Start 2P’, monospace;
 font-size: 14px;
-color: var(–accent);
+color: var(--accent);
 text-shadow: 0 0 20px rgba(0,229,255,0.4);
 letter-spacing: 2px;
 }
 
 header .subtitle {
 font-size: 11px;
-color: var(–text-dim);
+color: var(--text-dim);
 }
 
 .app {
@@ -76,8 +76,8 @@ height: calc(100vh - 57px);
 
 /* ─── Toolbar ─── */
 .toolbar {
-background: var(–panel);
-border-right: 1px solid var(–border);
+background: var(--panel);
+border-right: 1px solid var(--border);
 padding: 12px 8px;
 display: flex;
 flex-direction: column;
@@ -91,7 +91,7 @@ height: 40px;
 border: 1px solid transparent;
 border-radius: 6px;
 background: transparent;
-color: var(–text-dim);
+color: var(--text-dim);
 cursor: pointer;
 display: flex;
 align-items: center;
@@ -102,15 +102,15 @@ position: relative;
 }
 
 .tool-btn:hover {
-background: var(–hover);
-color: var(–text);
-border-color: var(–border);
+background: var(--hover);
+color: var(--text);
+border-color: var(--border);
 }
 
 .tool-btn.active {
 background: rgba(0,229,255,0.12);
-color: var(–accent);
-border-color: var(–accent);
+color: var(--accent);
+border-color: var(--accent);
 box-shadow: 0 0 12px rgba(0,229,255,0.15);
 }
 
@@ -121,12 +121,12 @@ left: 48px;
 top: 50%;
 transform: translateY(-50%);
 background: #1a1a2e;
-border: 1px solid var(–border);
+border: 1px solid var(--border);
 padding: 4px 8px;
 border-radius: 4px;
 font-size: 10px;
 white-space: nowrap;
-color: var(–text);
+color: var(--text);
 z-index: 100;
 }
 
@@ -135,7 +135,7 @@ z-index: 100;
 .tool-divider {
 width: 30px;
 height: 1px;
-background: var(–border);
+background: var(--border);
 margin: 4px 0;
 }
 
@@ -151,8 +151,8 @@ overflow: hidden;
 
 .canvas-wrap {
 position: relative;
-border: 2px solid var(–border);
-box-shadow: 0 0 40px rgba(0,0,0,0.5), 0 0 2px var(–accent);
+border: 2px solid var(--border);
+box-shadow: 0 0 40px rgba(0,0,0,0.5), 0 0 2px var(--accent);
 image-rendering: pixelated;
 }
 
@@ -167,15 +167,15 @@ position: absolute;
 bottom: 12px;
 left: 12px;
 font-size: 10px;
-color: var(–text-dim);
+color: var(--text-dim);
 display: flex;
 gap: 16px;
 }
 
 /* ─── Right Panel ─── */
 .right-panel {
-background: var(–panel);
-border-left: 1px solid var(–border);
+background: var(--panel);
+border-left: 1px solid var(--border);
 display: flex;
 flex-direction: column;
 overflow-y: auto;
@@ -183,13 +183,13 @@ overflow-y: auto;
 
 .panel-section {
 padding: 16px;
-border-bottom: 1px solid var(–border);
+border-bottom: 1px solid var(--border);
 }
 
 .panel-section h3 {
 font-family: ‘Press Start 2P’, monospace;
 font-size: 8px;
-color: var(–accent);
+color: var(--accent);
 text-transform: uppercase;
 letter-spacing: 2px;
 margin-bottom: 12px;
@@ -221,12 +221,12 @@ gap: 8px;
 align-items: center;
 }
 
-.color-inputs input[type=“color”] {
+.color-inputs input[type="color"] {
 width: 36px;
 height: 28px;
-border: 1px solid var(–border);
+border: 1px solid var(--border);
 border-radius: 4px;
-background: var(–bg);
+background: var(--bg);
 cursor: pointer;
 padding: 2px;
 }
@@ -234,14 +234,14 @@ padding: 2px;
 .current-color {
 width: 36px;
 height: 28px;
-border: 2px solid var(–border);
+border: 2px solid var(--border);
 border-radius: 4px;
 }
 
 /* Preview */
 .preview-box {
-background: var(–bg);
-border: 1px solid var(–border);
+background: var(--bg);
+border: 1px solid var(--border);
 border-radius: 6px;
 padding: 12px;
 display: flex;
@@ -252,7 +252,7 @@ gap: 8px;
 
 #previewCanvas {
 image-rendering: pixelated;
-border: 1px solid var(–border);
+border: 1px solid var(--border);
 }
 
 .preview-controls {
@@ -267,13 +267,13 @@ display: flex;
 align-items: center;
 gap: 6px;
 font-size: 11px;
-color: var(–text-dim);
+color: var(--text-dim);
 width: 100%;
 }
 
-.speed-control input[type=“range”] {
+.speed-control input[type="range"] {
 flex: 1;
-accent-color: var(–accent);
+accent-color: var(--accent);
 height: 4px;
 }
 
@@ -286,11 +286,11 @@ margin-bottom: 8px;
 font-size: 12px;
 }
 
-.setting-row label { color: var(–text-dim); }
-.setting-row select, .setting-row input[type=“number”] {
-background: var(–bg);
-border: 1px solid var(–border);
-color: var(–text);
+.setting-row label { color: var(--text-dim); }
+.setting-row select, .setting-row input[type="number"] {
+background: var(--bg);
+border: 1px solid var(--border);
+color: var(--text);
 padding: 4px 8px;
 border-radius: 4px;
 font-family: inherit;
@@ -301,8 +301,8 @@ width: 72px;
 /* ─── Bottom Timeline ─── */
 .timeline {
 grid-column: 1 / -1;
-background: var(–panel);
-border-top: 1px solid var(–border);
+background: var(--panel);
+border-top: 1px solid var(--border);
 padding: 12px 16px;
 display: flex;
 align-items: center;
@@ -313,7 +313,7 @@ overflow-x: auto;
 .timeline-label {
 font-family: ‘Press Start 2P’, monospace;
 font-size: 8px;
-color: var(–accent);
+color: var(--accent);
 writing-mode: vertical-lr;
 text-orientation: mixed;
 letter-spacing: 2px;
@@ -330,9 +330,9 @@ padding: 4px 0;
 .frame-thumb {
 min-width: 64px;
 height: 72px;
-border: 2px solid var(–border);
+border: 2px solid var(--border);
 border-radius: 6px;
-background: var(–bg);
+background: var(--bg);
 cursor: pointer;
 position: relative;
 display: flex;
@@ -343,9 +343,9 @@ transition: all 0.15s;
 overflow: hidden;
 }
 
-.frame-thumb:hover { border-color: var(–text-dim); }
+.frame-thumb:hover { border-color: var(--text-dim); }
 .frame-thumb.active {
-border-color: var(–accent);
+border-color: var(--accent);
 box-shadow: 0 0 12px rgba(0,229,255,0.2);
 }
 
@@ -357,7 +357,7 @@ height: 48px;
 
 .frame-thumb .frame-num {
 font-size: 8px;
-color: var(–text-dim);
+color: var(--text-dim);
 margin-top: 2px;
 }
 
@@ -368,7 +368,7 @@ right: 2px;
 width: 14px;
 height: 14px;
 border-radius: 50%;
-background: var(–accent2);
+background: var(--accent2);
 color: #fff;
 border: none;
 font-size: 8px;
@@ -389,10 +389,10 @@ gap: 6px;
 
 .btn {
 padding: 6px 14px;
-border: 1px solid var(–border);
+border: 1px solid var(--border);
 border-radius: 4px;
-background: var(–bg);
-color: var(–text);
+background: var(--bg);
+color: var(--text);
 cursor: pointer;
 font-family: inherit;
 font-size: 11px;
@@ -401,15 +401,15 @@ white-space: nowrap;
 }
 
 .btn:hover {
-border-color: var(–accent);
-color: var(–accent);
+border-color: var(--accent);
+color: var(--accent);
 background: rgba(0,229,255,0.05);
 }
 
 .btn.primary {
-background: linear-gradient(135deg, var(–accent), #00b8d4);
-color: var(–bg);
-border-color: var(–accent);
+background: linear-gradient(135deg, var(--accent), #00b8d4);
+color: var(--bg);
+border-color: var(--accent);
 font-weight: bold;
 }
 
@@ -418,7 +418,7 @@ box-shadow: 0 0 16px rgba(0,229,255,0.4);
 transform: translateY(-1px);
 }
 
-.btn.danger { border-color: var(–accent2); color: var(–accent2); }
+.btn.danger { border-color: var(--accent2); color: var(--accent2); }
 .btn.danger:hover { background: rgba(255,61,127,0.1); }
 
 /* Onion skin ghost */
@@ -445,8 +445,8 @@ justify-content: center;
 .modal-overlay.show { display: flex; }
 
 .modal {
-background: var(–panel);
-border: 1px solid var(–border);
+background: var(--panel);
+border: 1px solid var(--border);
 border-radius: 12px;
 padding: 24px;
 min-width: 320px;
@@ -456,7 +456,7 @@ box-shadow: 0 0 60px rgba(0,229,255,0.1);
 .modal h2 {
 font-family: ‘Press Start 2P’, monospace;
 font-size: 10px;
-color: var(–accent);
+color: var(--accent);
 margin-bottom: 16px;
 }
 
@@ -464,7 +464,7 @@ margin-bottom: 16px;
 
 #exportPreview {
 image-rendering: pixelated;
-border: 1px solid var(–border);
+border: 1px solid var(--border);
 max-width: 100%;
 display: block;
 margin: 12px auto;
@@ -475,12 +475,86 @@ display: flex;
 align-items: center;
 gap: 8px;
 font-size: 12px;
-color: var(–text-dim);
+color: var(--text-dim);
 margin-bottom: 6px;
 }
 
-.checkbox-row input[type=“checkbox”] {
-accent-color: var(–accent);
+.checkbox-row input[type="checkbox"] {
+accent-color: var(--accent);
+}
+
+/* Upload button */
+.upload-btn {
+padding: 6px 14px;
+border: 1px solid var(--accent2);
+border-radius: 4px;
+background: rgba(255,61,127,0.1);
+color: var(--accent2);
+cursor: pointer;
+font-family: 'Share Tech Mono', monospace;
+font-size: 11px;
+transition: all 0.15s;
+}
+
+.upload-btn:hover {
+background: rgba(255,61,127,0.2);
+box-shadow: 0 0 12px rgba(255,61,127,0.2);
+}
+
+/* Import modal */
+.import-preview-wrap {
+background: var(--bg);
+border: 1px solid var(--border);
+border-radius: 6px;
+padding: 12px;
+margin-bottom: 12px;
+text-align: center;
+overflow: hidden;
+}
+
+.import-preview-wrap canvas {
+image-rendering: pixelated;
+max-width: 100%;
+border: 1px solid var(--border);
+}
+
+#importFramePreview {
+display: flex;
+gap: 4px;
+flex-wrap: wrap;
+margin: 8px 0;
+max-height: 96px;
+overflow-y: auto;
+}
+
+#importFramePreview canvas {
+image-rendering: pixelated;
+border: 1px solid var(--border);
+width: 48px;
+height: 48px;
+background: var(--bg);
+}
+
+.import-info {
+font-size: 11px;
+color: var(--text-dim);
+margin-bottom: 10px;
+}
+
+.drop-overlay {
+position: absolute;
+inset: 0;
+background: rgba(0,229,255,0.08);
+border: 3px dashed var(--accent);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: 'Press Start 2P', monospace;
+font-size: 10px;
+color: var(--accent);
+pointer-events: none;
+z-index: 50;
 }
 </style>
 
@@ -490,6 +564,9 @@ accent-color: var(–accent);
 <header>
   <h1>SPRITE FORGE</h1>
   <span class="subtitle">Pixel Art GIF Maker</span>
+  <div style="flex:1"></div>
+  <input type="file" id="fileInput" accept=".png,image/png" style="display:none">
+  <button class="upload-btn" id="uploadBtn">&#128194; Upload PNG</button>
 </header>
 
 <div class="app">
@@ -554,7 +631,6 @@ accent-color: var(–accent);
       </div>
     </div>
 
-```
 <div class="panel-section">
   <h3>Preview</h3>
   <div class="preview-box">
@@ -611,7 +687,6 @@ accent-color: var(–accent);
   <button class="btn primary" id="exportGif" style="width:100%;margin-top:8px">⬇ Export GIF</button>
   <button class="btn" id="exportPng" style="width:100%;margin-top:6px">Export Spritesheet PNG</button>
 </div>
-```
 
   </div>
 
@@ -638,6 +713,34 @@ accent-color: var(–accent);
       <button class="btn primary" style="width:100%">⬇ Download GIF</button>
     </a>
     <button class="btn" onclick="document.getElementById('exportModal').classList.remove('show')" style="margin-top:8px">Close</button>
+  </div>
+</div>
+
+<!-- Import Modal -->
+<div class="modal-overlay" id="importModal">
+  <div class="modal" style="min-width:360px">
+    <h2>Import PNG</h2>
+    <div class="import-preview-wrap">
+      <canvas id="importPreviewCanvas"></canvas>
+    </div>
+    <p class="import-info" id="importInfo">-</p>
+    <div class="setting-row">
+      <label>Mode</label>
+      <select id="importMode">
+        <option value="single">Single Frame</option>
+        <option value="spritesheet">Spritesheet</option>
+      </select>
+    </div>
+    <div id="spritesheetOptions" style="display:none">
+      <div class="setting-row">
+        <label>Frames</label>
+        <input type="number" id="importFrameCount" min="1" max="256" value="1">
+      </div>
+    </div>
+    <p class="import-info" id="importFrameSize">Frame size: -</p>
+    <div id="importFramePreview"></div>
+    <button class="btn primary" id="importBtn" style="width:100%;margin-top:8px">Import</button>
+    <button class="btn" onclick="document.getElementById('importModal').classList.remove('show')" style="width:100%;margin-top:6px">Cancel</button>
   </div>
 </div>
 
@@ -1175,6 +1278,236 @@ document.addEventListener('keydown', (e) => {
     case 'r': document.querySelector('[data-tool="rect"]').click(); break;
     case 'i': document.querySelector('[data-tool="eyedrop"]').click(); break;
   }
+});
+
+// ─── Import PNG ───
+let importedImage = null;
+
+document.getElementById('uploadBtn').onclick = () => {
+  document.getElementById('fileInput').click();
+};
+
+document.getElementById('fileInput').onchange = (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (ev) => {
+    const img = new Image();
+    img.onload = () => {
+      importedImage = img;
+      showImportModal(img);
+    };
+    img.src = ev.target.result;
+  };
+  reader.readAsDataURL(file);
+  e.target.value = '';
+};
+
+function showImportModal(img) {
+  const modal = document.getElementById('importModal');
+  const info = document.getElementById('importInfo');
+  const modeSelect = document.getElementById('importMode');
+  const frameCountInput = document.getElementById('importFrameCount');
+  const spritesheetOpts = document.getElementById('spritesheetOptions');
+
+  // Draw preview
+  const previewCanvas = document.getElementById('importPreviewCanvas');
+  const pCtx = previewCanvas.getContext('2d');
+  const maxW = 320, maxH = 180;
+  const scale = Math.min(maxW / img.width, maxH / img.height, 16);
+  previewCanvas.width = Math.max(1, Math.floor(img.width * scale));
+  previewCanvas.height = Math.max(1, Math.floor(img.height * scale));
+  pCtx.imageSmoothingEnabled = false;
+  pCtx.drawImage(img, 0, 0, previewCanvas.width, previewCanvas.height);
+
+  info.textContent = `Image: ${img.width} \u00d7 ${img.height} pixels`;
+
+  // Auto-detect spritesheet: if width is a multiple of height and wider
+  const ratio = img.width / img.height;
+  const isLikelySpritesheet = img.width > img.height && ratio === Math.floor(ratio) && ratio > 1;
+
+  if (isLikelySpritesheet) {
+    modeSelect.value = 'spritesheet';
+    frameCountInput.value = Math.floor(ratio);
+    spritesheetOpts.style.display = 'block';
+  } else {
+    modeSelect.value = 'single';
+    frameCountInput.value = 1;
+    spritesheetOpts.style.display = 'none';
+  }
+
+  updateImportPreview();
+  modal.classList.add('show');
+}
+
+function updateImportPreview() {
+  const img = importedImage;
+  if (!img) return;
+
+  const mode = document.getElementById('importMode').value;
+  const frameCount = mode === 'spritesheet'
+    ? Math.max(1, parseInt(document.getElementById('importFrameCount').value) || 1)
+    : 1;
+
+  const frameW = Math.floor(img.width / frameCount);
+  const frameH = img.height;
+
+  document.getElementById('importFrameSize').textContent =
+    `Frame size: ${frameW} \u00d7 ${frameH}px \u2014 ${frameCount} frame${frameCount > 1 ? 's' : ''}`;
+
+  // Draw individual frame previews
+  const container = document.getElementById('importFramePreview');
+  container.innerHTML = '';
+
+  const showCount = Math.min(frameCount, 16);
+  for (let i = 0; i < showCount; i++) {
+    const c = document.createElement('canvas');
+    c.width = frameW;
+    c.height = frameH;
+    c.getContext('2d').drawImage(img, i * frameW, 0, frameW, frameH, 0, 0, frameW, frameH);
+    container.appendChild(c);
+  }
+  if (frameCount > 16) {
+    const more = document.createElement('span');
+    more.style.cssText = 'font-size:10px;color:#6a6a8e;align-self:center;padding:4px;';
+    more.textContent = `+${frameCount - 16} more`;
+    container.appendChild(more);
+  }
+}
+
+document.getElementById('importMode').onchange = () => {
+  const mode = document.getElementById('importMode').value;
+  document.getElementById('spritesheetOptions').style.display =
+    mode === 'spritesheet' ? 'block' : 'none';
+  if (mode === 'single') {
+    document.getElementById('importFrameCount').value = 1;
+  } else if (importedImage) {
+    const ratio = importedImage.width / importedImage.height;
+    const guess = (ratio === Math.floor(ratio) && ratio > 1) ? Math.floor(ratio) : 2;
+    document.getElementById('importFrameCount').value = guess;
+  }
+  updateImportPreview();
+};
+
+document.getElementById('importFrameCount').oninput = updateImportPreview;
+
+document.getElementById('importBtn').onclick = () => {
+  const img = importedImage;
+  if (!img) return;
+
+  const mode = document.getElementById('importMode').value;
+  const frameCount = mode === 'spritesheet'
+    ? Math.max(1, parseInt(document.getElementById('importFrameCount').value) || 1)
+    : 1;
+
+  const frameW = Math.floor(img.width / frameCount);
+  const frameH = img.height;
+
+  // Set canvas size to fit the frame (use max dimension for square canvas)
+  pixelSize = Math.max(frameW, frameH);
+
+  // Cap at a reasonable max to prevent performance issues
+  if (pixelSize > 256) {
+    const downscale = 128 / pixelSize;
+    pixelSize = 128;
+  }
+
+  // Update canvas size dropdown
+  const sizeSelect = document.getElementById('canvasSize');
+  let matched = false;
+  for (const opt of sizeSelect.options) {
+    if (parseInt(opt.value) === pixelSize) {
+      opt.selected = true;
+      matched = true;
+    }
+  }
+  if (!matched) {
+    const opt = document.createElement('option');
+    opt.value = pixelSize;
+    opt.textContent = `${pixelSize}\u00d7${pixelSize}`;
+    opt.selected = true;
+    sizeSelect.appendChild(opt);
+  }
+
+  updateCanvasSize();
+
+  // Clear existing state
+  frames = [];
+  undoStack = [];
+  redoStack = [];
+
+  // Import each frame
+  for (let i = 0; i < frameCount; i++) {
+    const c = createEmptyFrame();
+    const cCtx = c.getContext('2d');
+    cCtx.imageSmoothingEnabled = false;
+
+    // Center the frame if non-square
+    const dx = Math.floor((pixelSize - frameW) / 2);
+    const dy = Math.floor((pixelSize - frameH) / 2);
+
+    // If we need to downscale (image was > 256px)
+    if (Math.max(frameW, frameH) > 256) {
+      const fitScale = 128 / Math.max(frameW, frameH);
+      const dw = Math.floor(frameW * fitScale);
+      const dh = Math.floor(frameH * fitScale);
+      const ddx = Math.floor((pixelSize - dw) / 2);
+      const ddy = Math.floor((pixelSize - dh) / 2);
+      cCtx.drawImage(img, i * frameW, 0, frameW, frameH, ddx, ddy, dw, dh);
+    } else {
+      cCtx.drawImage(img, i * frameW, 0, frameW, frameH, dx, dy, frameW, frameH);
+    }
+
+    frames.push(c);
+  }
+
+  currentFrame = 0;
+  renderFrame();
+  renderTimeline();
+
+  document.getElementById('importModal').classList.remove('show');
+  importedImage = null;
+};
+
+// ─── Drag & Drop ───
+const canvasArea = document.querySelector('.canvas-area');
+
+canvasArea.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'copy';
+  if (!canvasArea.querySelector('.drop-overlay')) {
+    const overlay = document.createElement('div');
+    overlay.className = 'drop-overlay';
+    overlay.textContent = 'Drop PNG here';
+    canvasArea.appendChild(overlay);
+  }
+});
+
+canvasArea.addEventListener('dragleave', (e) => {
+  if (!canvasArea.contains(e.relatedTarget)) {
+    const overlay = canvasArea.querySelector('.drop-overlay');
+    if (overlay) overlay.remove();
+  }
+});
+
+canvasArea.addEventListener('drop', (e) => {
+  e.preventDefault();
+  const overlay = canvasArea.querySelector('.drop-overlay');
+  if (overlay) overlay.remove();
+
+  const file = e.dataTransfer.files[0];
+  if (!file || !file.type.startsWith('image/')) return;
+
+  const reader = new FileReader();
+  reader.onload = (ev) => {
+    const img = new Image();
+    img.onload = () => {
+      importedImage = img;
+      showImportModal(img);
+    };
+    img.src = ev.target.result;
+  };
+  reader.readAsDataURL(file);
 });
 
 init();
